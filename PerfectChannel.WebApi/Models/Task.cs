@@ -26,6 +26,11 @@ namespace PerfectChannel.WebApi.Models
                     return false;
                 }
 
+                if (Status != "Completed" && Status != "Pending")
+                {
+                    return false;
+                }
+
                 return true;
             }
         }

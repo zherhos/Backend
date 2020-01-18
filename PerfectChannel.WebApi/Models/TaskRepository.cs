@@ -46,7 +46,6 @@ namespace PerfectChannel.WebApi.Models
             }
             
             CopyTaskOverSavedTask(task, savedTask);
-            dbContext.SaveChanges();
 
             return dbContext.SaveChanges();
         }
@@ -70,7 +69,7 @@ namespace PerfectChannel.WebApi.Models
         private void CopyTaskOverSavedTask(ITask task, ITask savedTask)
         {
             savedTask.Description = task.Description;
-            savedTask.Status = task.Description;
+            savedTask.Status = task.Status;
         }
         #endregion
     }
